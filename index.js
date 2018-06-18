@@ -11,7 +11,7 @@ var AfricasTalking = require('africastalking')(options);
 app.post('/ussd', new AfricasTalking.USSD((params, next) => {
     var endSession = false;
     var message = '';
-    console.log(params); //DEBUGGING REMOVE 
+    // console.log(params); //DEBUGGING REMOVE 
 
     if (params.text === '') {
         message = "Welcome to My Awesome Service \n";
