@@ -65,6 +65,6 @@ app.get('/', function(req, res) {
 const PORT = process.env.PORT
 
 
-app.listen(3000, function() {
+app.listen(PORT, function() {
     console.log('App live on port 3000!')
 })
