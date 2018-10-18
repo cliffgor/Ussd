@@ -17,6 +17,8 @@ app.post('/ussd', new AfricasTalking.USSD((params, next) => {
         message = "Welcome to My Awesome Service \n";
         message += "1: To Halla back \n";
         message += "2: For more awesomeness";
+        message += "3: To get airtime from us"
+        message += "4: To exit the system"
 
     } else if (params.text === '1') {
         message = "Yoh 'Sup?";
@@ -26,6 +28,15 @@ app.post('/ussd', new AfricasTalking.USSD((params, next) => {
         message = "Enter 1 for a shocker \n";
         message += "Enter 2 for another shocker";
         endSession = false;
+    }else if (params.text === '3') {
+         message = "Enter 1 For a 50 airtime reward \n";
+         message += "Enter 2 For a Ksh 100 Airtime award";
+         message += "Enter 00 to go back to the main menu"
+         endSession = false;
+    }else if (params.text === '4') {
+        message = "Thank you for using My Awesome Service. Please comeback again";
+        endSession = true;
+
     } else if (params.text === '2*2') {
 
         message = "Dude.... \n";
@@ -50,6 +61,9 @@ app.post('/ussd', new AfricasTalking.USSD((params, next) => {
 app.get('/', function(req, res) {
     res.send('Alive!')
 })
+
+const PORT = process.env.PORT
+
 
 app.listen(3000, function() {
     console.log('App live on port 3000!')
