@@ -16,8 +16,8 @@ app.post('/ussd', new AfricasTalking.USSD((params, next) => {
     if (params.text === '') {
         message = "Welcome to My Awesome Service \n";
         message += "1: To Halla back \n";
-        message += "2: For more awesomeness";
-        message += "3: To get airtime from us"
+        message += "2: For more awesomeness\n";
+        message += "3: To get airtime from us\n";
         message += "4: To exit the system"
 
     } else if (params.text === '1') {
