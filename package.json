@@ -1,5 +1,8 @@
 {
   "name": "ussd",
+  "engines": {
+    "node": "10.5.0",
+    "npm": "6.4.1"},
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
