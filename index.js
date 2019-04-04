@@ -37,7 +37,7 @@ app.post('/ussd', new AfricasTalking.USSD((params, next) => {
         message = "Thank you for using My Awesome Service. Please comeback again";
         endSession = true;
 
-    } else if (params.text === '2*2') {
+    } else if (params.text === 'hello') {
 
         message = "Dude.... \n";
         endSession = true;
