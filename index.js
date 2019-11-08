@@ -23,7 +23,7 @@ app.post('/ussd', new AfricasTalking.USSD((params, next) => {
     } else if (params.text === '1') {
         message = "Please Select Farming Section, Reply with \n";
         message += "1: Cow Dairy Farming \n";
-        message += "2:Horticulture Farming \n";
+        message += "2: Horticulture Farming \n";
         message += "3: Tomato Farming \n";
         endSession = false;
 
@@ -58,7 +58,7 @@ app.post('/ussd', new AfricasTalking.USSD((params, next) => {
     } else if (params.text === '1*3') {
         message = "Type your Tomato Farming Question";
         message += " \n";
-        endSession = true;
+        endSession = false;
 
     } else if (params.text === '2*1*3*1') {
 
