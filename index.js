@@ -65,7 +65,7 @@ app.post('/ussd', new AfricasTalking.USSD((params, next) => {
         endSession = true;
 
     }else if (params.text === '2*1*3') {
-        message = "Please Select Farm Yield? Reply with \n";
+        message = "Select Town / City  Reply with \n";
         message += "1: Carrots \n";
         message += "2: Potatoes \n";
         message += "3: Cabbage \n"
