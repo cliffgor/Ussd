@@ -14,8 +14,8 @@ app.post('/ussd', new AfricasTalking.USSD((params, next) => {
     // console.log(params); //DEBUGGING REMOVE 
 
     if (params.text === '') {
-        message = "Welcome to Cross Farmers \n ";
-        message = "What is your question on? Reply with ";
+        message = "Welcome to Cross Farmers";
+        message = "What is your question on? Reply with \n ";
         message += "1: Farming \n";
         message += "2: Market\n";
         message += "4: To exit the system"
