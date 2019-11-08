@@ -26,11 +26,11 @@ app.post('/ussd', new AfricasTalking.USSD((params, next) => {
         message += "3: Tomato Farming \n";
         endSession = false;
 
-    } else if (params.text === '2') {
+    } else if (params.text === '2*2') {
         message = "1: Farmer \n";
         message += "2: Buyer";
         endSession = false;
-    }else if (params.text === '2*1') {
+    }else if (params.text === '2*2*2*1') {
          message = "1: Carrots \n";
          message += "2: Potatoes \n";
          message += "3: Cabbage \n"
