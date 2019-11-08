@@ -21,7 +21,7 @@ app.post('/ussd', new AfricasTalking.USSD((params, next) => {
         message += "4: To exit the system"
 
     } else if (params.text === '1') {
-        message = "Please Select Farming Section, Reply with";
+        message = "Please Select Farming Section, Reply with \n";
         message += "1: Cow Dairy Farming \n";
         message += "2:Horticulture Farming \n";
         message += "3: Tomato Farming \n";
