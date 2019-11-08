@@ -31,9 +31,10 @@ app.post('/ussd', new AfricasTalking.USSD((params, next) => {
         message += "2: Buyer";
         endSession = false;
     }else if (params.text === '2*1') {
-         message = "Enter 1 For a 50 airtime reward \n";
-         message += "Enter 2 For a Ksh 100 Airtime award";
-         message += "Enter 00 to go back to the main menu"
+         message = "1: Carrots \n";
+         message += "2: Potatoes \n";
+         message += "3: Cabbage \n"
+         message += "4: Cabbage"
          endSession = false;
     }else if (params.text === '4') {
         message = "Thank you for using Cross Farmers. Please comeback again";
@@ -44,12 +45,25 @@ app.post('/ussd', new AfricasTalking.USSD((params, next) => {
         message = "Dude.... \n";
         endSession = true;
 
+    } else if (params.text === '2*1*1') {
+
+        message = "1: Naivasha \n";
+         message += "2: Nyandarua \n";
+         message += "3: Nakuru \n"
+         message += "4: Enginia"
+         endSession = false;
+
     } else if (params.text === '2*1') {
 
         message = "You mad broh?! \n";
         endSession = true;
 
-    } else {
+    } else if (params.text === '2*1') {
+
+        message = "You mad broh?! \n";
+        endSession = true;
+
+    }else {
         message = "Invalid option";
         endSession = true;
     }
