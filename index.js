@@ -15,7 +15,7 @@ app.post('/ussd', new AfricasTalking.USSD((params, next) => {
 
     if (params.text === '') {
         message = "Welcome to Cross Farmers \n ";
-        message = "What is your question on? Reply with \n";
+        message = "What is your question on? Reply with ";
         message += "1: Farming \n";
         message += "2: Market\n";
         message += "4: To exit the system"
