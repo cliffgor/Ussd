@@ -15,7 +15,7 @@ app.post('/ussd', new AfricasTalking.USSD((params, next) => {
 
     if (params.text === '') {
         message = "Welcome to Cross Farmers";
-        message = "What is your question on? Reply with \n ";
+        message += "What is your question on? Reply with \n ";
         message += "1: Farming \n";
         message += "2: Market\n";
         message += "4: To exit the system"
@@ -32,7 +32,7 @@ app.post('/ussd', new AfricasTalking.USSD((params, next) => {
         endSession = false;
     }else if (params.text === '2*1') {
          message = "Please Select Farm Yield? Reply with \n";
-         message = "1: Carrots \n";
+         message += "1: Carrots \n";
          message += "2: Potatoes \n";
          message += "3: Cabbage \n"
          message += "4: Cabbage"
@@ -64,7 +64,14 @@ app.post('/ussd', new AfricasTalking.USSD((params, next) => {
         message = "You mad broh?! \n";
         endSession = true;
 
-    }else {
+    }else if (params.text === '2*1*3') {
+        message = "Please Select Farm Yield? Reply with \n";
+        message += "1: Carrots \n";
+        message += "2: Potatoes \n";
+        message += "3: Cabbage \n"
+        message += "4: Cabbage"
+        endSession = false;
+   }else {
         message = "Invalid option";
         endSession = true;
     }
