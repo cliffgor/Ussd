@@ -30,8 +30,8 @@ app.post('/ussd', new AfricasTalking.USSD((params, next) => {
         message = "1: Farmer \n";
         message += "2: Buyer";
         endSession = false;
-    }else if (params.text === '2*2*1') {
-        message = "Please Select Farm Yield? Reply with \n";
+    }else if (params.text === '2*1') {
+         message = "Please Select Farm Yield? Reply with \n";
          message = "1: Carrots \n";
          message += "2: Potatoes \n";
          message += "3: Cabbage \n"
@@ -54,12 +54,12 @@ app.post('/ussd', new AfricasTalking.USSD((params, next) => {
          message += "4: Enginia"
          endSession = false;
 
-    } else if (params.text === '2*1') {
+    } else if (params.text === '2*98') {
 
         message = "You mad broh?! \n";
         endSession = true;
 
-    } else if (params.text === '2*1') {
+    } else if (params.text === '2*98') {
 
         message = "You mad broh?! \n";
         endSession = true;
