@@ -59,17 +59,17 @@ app.post('/ussd', new AfricasTalking.USSD((params, next) => {
         message = "You mad broh?! \n";
         endSession = true;
 
-    } else if (params.text === '2*98') {
+    } else if (params.text === '2*1*3*1') {
 
-        message = "You mad broh?! \n";
+        message = "Thank you for using Cross Farmers, a reply text will be sent to your mobile shortly with the prices \n";
         endSession = true;
 
     }else if (params.text === '2*1*3') {
         message = "Select Town / City  Reply with \n";
-        message += "1: Carrots \n";
-        message += "2: Potatoes \n";
-        message += "3: Cabbage \n"
-        message += "4: Cabbage"
+        message += "1: Nairobi \n";
+        message += "2: Kisumu \n";
+        message += "3: Mombasa \n"
+        message += "4: Eldoret"
         endSession = false;
    }else {
         message = "Invalid option";
