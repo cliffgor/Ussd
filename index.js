@@ -14,16 +14,16 @@ app.post('/ussd', new AfricasTalking.USSD((params, next) => {
     // console.log(params); //DEBUGGING REMOVE 
 
     if (params.text === '') {
-        message = "Welcome to Cross Farmers ";
+        message = "Welcome to Cross Farmers \n ";
         message = "What is your question on? Reply with \n";
         message += "1: Farming \n";
         message += "2: Market\n";
         message += "4: To exit the system"
 
     } else if (params.text === '1') {
-        message = "1: Cow Dairy Farming \n";
-        message += "2:Horticulture Farming";
-        message += "3: Tomato Farming";
+        message += "1: Cow Dairy Farming \n";
+        message += "2:Horticulture Farming \n";
+        message += "3: Tomato Farming \n";
         endSession = false;
 
     } else if (params.text === '2') {
