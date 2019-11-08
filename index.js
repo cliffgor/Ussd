@@ -30,13 +30,13 @@ app.post('/ussd', new AfricasTalking.USSD((params, next) => {
         message = "1: Farmer \n";
         message += "2: Buyer";
         endSession = false;
-    }else if (params.text === '1*2') {
+    }else if (params.text === '2*1') {
          message = "Enter 1 For a 50 airtime reward \n";
          message += "Enter 2 For a Ksh 100 Airtime award";
          message += "Enter 00 to go back to the main menu"
          endSession = false;
     }else if (params.text === '4') {
-        message = "Thank you for using My Awesome Service. Please comeback again";
+        message = "Thank you for using Cross Farmers. Please comeback again";
         endSession = true;
 
     } else if (params.text === 'hello') {
