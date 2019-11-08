@@ -14,10 +14,10 @@ app.post('/ussd', new AfricasTalking.USSD((params, next) => {
     // console.log(params); //DEBUGGING REMOVE 
 
     if (params.text === '') {
-        message = "Welcome to My Awesome Service \n";
-        message += "1: To Halla back \n";
-        message += "2: For more awesomeness\n";
-        message += "3: To get airtime from us\n";
+        message = "Welcome to Cross Farmers \n";
+        message = "What is your question on? Reply with \n";
+        message += "1: Farming \n";
+        message += "2: Market\n";
         message += "4: To exit the system"
 
     } else if (params.text === '1') {
