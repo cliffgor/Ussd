@@ -75,7 +75,7 @@ app.post('/ussd', new AfricasTalking.USSD((params, next) => {
    } else if (params.text === '1*3*tomato is withering') {
     message = "Thank you for using Cross Farmers, your information has been sent to your nearing Agricultural Extension Office a text will be sent to your mobile shortly with the instructions on caring for your tomatoes";
     message += " \n";
-    endSession = false;
+    endSession = true;
 
    }else {
         message = "Invalid option";
